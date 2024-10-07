@@ -1,6 +1,6 @@
 # House of YAML
 
-![logo](logo.svg | height=150)
+<img src="/durableprogramming/house-of-yaml/raw/e34d216831602f92e64512ca09fc67889f321bb5/logo.svg" alt="logo" style="max-height: 150px;">
 
 House of YAML is a powerful and flexible Ruby gem designed to simplify the process of synchronizing data from various services and storing it as human-readable YAML files in a Git repository. It provides a reliable and convenient way to backup, version control, and process your data, ensuring that it remains accessible and usable even if the original services change or become unavailable.
 
