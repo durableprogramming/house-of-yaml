@@ -1,0 +1,24 @@
+# typed: strict
+module HouseOfYaml
+  extend self
+
+  attr_accessor loader: Zeitwerk::Loader
+
+  def sync: (String repo_path) -> void
+
+  def push: () -> void
+
+  def clone_or_pull_repo: () -> void
+
+  def write_yaml_files: (Hash[untyped, untyped] yaml_data, Symbol | String service_name) -> void
+
+  def commit_changes: () -> void
+
+  def logger: () -> Logger
+
+  class Services::Base
+    def self.services: () -> Array[Services::Base]
+    def each_output: () { (untyped) -> void } -> void
+    def service_name: () -> Symbol | String
+  end
+end

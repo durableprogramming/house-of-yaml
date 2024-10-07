@@ -1,0 +1,14 @@
+# sig/house_of_yaml/services/base.rbs
+module HouseOfYaml
+  module Services
+    class Base
+      def self.services: () -> Array[Base]
+
+      def self.add: (String | Class, **untyped) -> Array[Base]
+
+      def self.[]: (String | Symbol | Integer) -> Base?
+
+      def logger: () -> Logger
+    end
+  end
+end

@@ -1,0 +1,29 @@
+module HouseOfYaml
+  module Services
+    class Asana < Base
+      include HTTParty
+
+      def initialize: (asana_api_key: String) -> void
+
+      attr_writer service_name: String
+
+      def service_name: () -> String
+
+      def fetch_data: () -> Array[Hash[String, untyped]]
+
+      def transform_data: (Array[Hash[String, untyped]]) -> Hash[String, Hash[String, untyped]]
+
+      def fetch_workspaces: () -> Array[Hash[String, untyped]]
+
+      def fetch_projects: (Array[Hash[String, untyped]]) -> Array[Hash[String, untyped]]
+
+      def fetch_tasks: (Array[Hash[String, untyped]]) -> Array[Hash[String, untyped]]
+
+      def each_output: (?workspaces: Array[Hash[String, untyped]]?, ?projects: Array[Hash[String, untyped]]?) { (Hash[String, untyped]) -> void } -> void
+
+      private
+
+      def log_error: (Exception) -> void
+    end
+  end
+end

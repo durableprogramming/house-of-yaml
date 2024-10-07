@@ -1,0 +1,25 @@
+module HouseOfYaml
+  module Services
+    class Jira < Base
+      include HTTParty
+
+      attr_writer service_name: String
+
+      def initialize: (base_uri: String, email: String, api_key: String) -> void
+
+      def service_name: () -> String
+
+      def fetch_data: (String project_id) -> Array[Hash[String, untyped]]
+
+      def transform_data: (Array[Hash[String, untyped]] data) -> Hash[String, Hash[String, String?]]
+
+      def fetch_projects: () -> Array[Hash[String, untyped]]
+
+      def each_output: { (Hash[String, String?] transformed_issue) -> void } -> void
+
+      private
+
+      def log_error: (Exception error) -> void
+    end
+  end
+end
